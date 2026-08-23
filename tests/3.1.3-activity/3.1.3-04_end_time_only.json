@@ -1,0 +1,11 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "activity": {
+    "ex:a1": {
+      "prov:endTime": "2011-11-16T16:06:00",
+      "prov:type": {"$": "ex:Computation", "type": "prov:QualifiedName"}
+    }
+  }
+}

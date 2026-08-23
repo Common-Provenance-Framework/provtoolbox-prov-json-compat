@@ -1,0 +1,11 @@
+{
+  "prefix": {
+    "default": "http://example.org/",
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "e1": {
+      "prov:label": {"$": "My Entity", "lang": "en"}
+    }
+  }
+}

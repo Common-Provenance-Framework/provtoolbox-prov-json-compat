@@ -1,0 +1,11 @@
+{
+  "prefix": { "ex": "http://example.org/" },
+  "bundle": {
+    "ex:bundle1": {
+      "prefix": { "inner": "http://inner.example.org/" },
+      "entity": {
+        "inner:e1": {}
+      }
+    }
+  }
+}

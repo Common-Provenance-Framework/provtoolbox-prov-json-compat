@@ -1,0 +1,19 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "wasGeneratedBy": {
+    "_:wBG1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1",
+      "prov:time": "2001-10-26T21:32:52",
+      "ex:port": "p1"
+    },
+    "ex:gen1": {
+      "prov:entity": "ex:e2",
+      "prov:activity": "ex:a1",
+      "prov:time": "2001-10-26T10:00:00",
+      "ex:port": "p1"
+    }
+  }
+}

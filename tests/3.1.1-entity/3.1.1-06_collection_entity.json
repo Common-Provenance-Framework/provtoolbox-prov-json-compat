@@ -1,0 +1,11 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:myCollection": {
+      "prov:type": {"$": "prov:Collection", "type": "prov:QUALIFIED_NAME"},
+      "prov:label": {"$": "A collection of items", "lang": "en"}
+    }
+  }
+}

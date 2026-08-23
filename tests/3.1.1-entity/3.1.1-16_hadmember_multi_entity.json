@@ -1,0 +1,19 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:collection1": {
+      "prov:type": {"$": "prov:Collection", "type": "prov:QUALIFIED_NAME"}
+    },
+    "ex:item1": {},
+    "ex:item2": {},
+    "ex:item3": {}
+  },
+  "hadMember": {
+    "_:m1": {
+      "prov:collection": "ex:collection1",
+      "prov:entity": ["ex:item1", "ex:item2", "ex:item3"]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:entity-with-dashes": {},
+    "ex:entity_with_underscores": {},
+    "ex:entity.with.dots": {},
+    "ex:Entity123Numbers": {}
+  }
+}

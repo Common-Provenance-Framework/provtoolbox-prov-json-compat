@@ -1,0 +1,12 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "used": {
+    "ex:use1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1",
+      "prov:role": {"$": "ex:InputData", "type": "prov:QualifiedName"}
+    }
+  }
+}

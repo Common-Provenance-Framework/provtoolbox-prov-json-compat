@@ -1,0 +1,16 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "agent": {
+    "ex:ag1": {
+      "prov:type": {"$": "prov:Person", "type": "prov:QualifiedName"}
+    },
+    "ex:ag2": {
+      "prov:type": {"$": "prov:Organization", "type": "prov:QualifiedName"}
+    },
+    "ex:ag3": {
+      "prov:type": {"$": "prov:SoftwareAgent", "type": "prov:QualifiedName"}
+    }
+  }
+}

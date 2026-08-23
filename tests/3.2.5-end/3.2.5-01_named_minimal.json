@@ -1,0 +1,9 @@
+{
+  "prefix": { "ex": "http://example.org/" },
+  "wasEndedBy": {
+    "ex:end1": {
+      "prov:activity": "ex:a1",
+      "prov:trigger": "ex:e1"
+    }
+  }
+}

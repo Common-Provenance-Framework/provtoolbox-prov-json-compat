@@ -1,0 +1,168 @@
+# PROV-JSON Compatibility Test Manifest
+# ProvToolbox v2.2.4 — SPEC-CORRECT expected outcomes
+#
+# Format: section<TAB>test_id<TAB>expected_verdict<TAB>issue_ids<TAB>description
+#
+# Expected verdicts reflect what a SPEC-COMPLIANT implementation should do:
+#   ROUND_TRIP_IDENTICAL  — valid PROV-JSON must round-trip without loss
+#   PARSE_FAILED          — intentionally invalid input; crash is correct
+#
+# A test PASSES when ProvToolbox produces the spec-correct result.
+# A test FAILS when ProvToolbox deviates from spec-correct behavior.
+#
+2.1-identifiers	2.1-01_standard_qname	ROUND_TRIP_IDENTICAL		Standard qualified name — valid PROV-JSON
+2.1-identifiers	2.1-02_implicit_prov_prefix	ROUND_TRIP_IDENTICAL		Implicit prov: prefix — spec allows omitting well-known prefixes
+2.1-identifiers	2.1-03_implicit_xsd_prefix	ROUND_TRIP_IDENTICAL		Implicit xsd: prefix — spec allows omitting well-known prefixes
+2.1-identifiers	2.1-04_no_prefix_section	ROUND_TRIP_IDENTICAL	D2.1-1	No prefix key — spec says prefix is OPTIONAL
+2.1-identifiers	2.1-05_default_namespace	ROUND_TRIP_IDENTICAL		Default namespace — valid PROV-JSON
+2.1-identifiers	2.1-06_blank_node_relation	ROUND_TRIP_IDENTICAL	D3.2.1-1	Blank node ID on relation — spec allows _: identifiers
+2.1-identifiers	2.1-07_blank_node_entity	ROUND_TRIP_IDENTICAL	D2.1-2	Blank node ID on entity — spec allows _: identifiers
+2.1-identifiers	2.1-08_same_iri_two_qnames	ROUND_TRIP_IDENTICAL	D2.1-3	Two prefixes mapping to same IRI — valid JSON
+2.1-identifiers	2.1-09_full_uri_identifier	ROUND_TRIP_IDENTICAL	D2.1-4	Full URI as identifier — spec allows IRIs
+2.1-identifiers	2.1-10_default_as_prefix_name	ROUND_TRIP_IDENTICAL	D2.1-5	"default" as prefix name — valid JSON key
+2.1-identifiers	2.1-11_null_prefix_value	PARSE_FAILED		Null prefix value — not a valid namespace IRI
+2.1-identifiers	2.1-12_user_underscore_prefix	ROUND_TRIP_IDENTICAL	D2.1-7	User "_" prefix — valid JSON key, should not be overridden
+2.1-identifiers	2.1-13_special_chars_identifier	ROUND_TRIP_IDENTICAL		Special chars in local part — valid PROV-JSON
+2.1-identifiers	2.1-14_empty_prefix_section	ROUND_TRIP_IDENTICAL		Empty prefix section — valid PROV-JSON
+2.1-identifiers	2.1-15_blank_node_agent	ROUND_TRIP_IDENTICAL	D2.1-2	Blank node agent — spec allows _: identifiers
+2.1-identifiers	2.1-16_blank_node_activity	ROUND_TRIP_IDENTICAL	D2.1-2	Blank node activity — spec allows _: identifiers
+2.1-identifiers	2.1-17_empty_string_prefix	ROUND_TRIP_IDENTICAL		Empty string prefix name — valid JSON key
+2.1-identifiers	2.1-18_underscore_prefix_and_blank	ROUND_TRIP_IDENTICAL	D2.1-7	User "_" prefix + blank node — should coexist
+2.1-identifiers	2.1-19_same_iri_relations	ROUND_TRIP_IDENTICAL	D2.1-3	Same IRI on relations — valid JSON
+2.1-identifiers	2.1-20_hash_vs_slash_namespace	ROUND_TRIP_IDENTICAL		Hash vs slash namespace — valid PROV-JSON
+2.1-identifiers	2.1-21_blank_entity_alone	ROUND_TRIP_IDENTICAL	D2.1-2	Blank node entity alone — spec allows _: identifiers
+2.1-identifiers	2.1-22_blank_entity_with_underscore_prefix	ROUND_TRIP_IDENTICAL	D2.1-2,D2.1-7	Blank entity with user _ prefix
+2.1-identifiers	2.1-23_blank_entity_with_relation	ROUND_TRIP_IDENTICAL	D2.1-2	Blank entity referenced by relation — valid
+2.1-identifiers	2.1-24_blank_entity_only_no_normal	ROUND_TRIP_IDENTICAL	D2.1-2	Only blank entities — valid PROV-JSON
+2.1-identifiers	2.1-25_same_iri_agents	ROUND_TRIP_IDENTICAL	D2.1-3	Same IRI agents — valid JSON
+2.1-identifiers	2.1-26_blank_entity_with_underscore_no_other	ROUND_TRIP_IDENTICAL	D2.1-2,D2.1-7	Blank entity + _ prefix, no other entities
+2.2-data-typing	2.2-01_spec_example1_typed	ROUND_TRIP_IDENTICAL	D2.2-1	Spec Example 1 — typed value {"$":...,"type":...}
+2.2-data-typing	2.2-02_lang_tagged_string	ROUND_TRIP_IDENTICAL	D2.2-1	Language-tagged string {"$":...,"lang":...}
+2.2-data-typing	2.2-03_spec_example3_mixed_array	ROUND_TRIP_IDENTICAL	D2.2-3	Spec Example 3 — mixed typed+native array
+2.2-data-typing	2.2-04_native_string	ROUND_TRIP_IDENTICAL	D2.2-2	Native JSON string — spec Section 2.2
+2.2-data-typing	2.2-05_native_integer	ROUND_TRIP_IDENTICAL	D2.2-2	Native JSON integer — spec Section 2.2
+2.2-data-typing	2.2-06_native_float	ROUND_TRIP_IDENTICAL	D2.2-2	Native JSON float — spec Section 2.2
+2.2-data-typing	2.2-07_native_boolean	ROUND_TRIP_IDENTICAL	D2.2-2	Native JSON boolean — spec Section 2.2
+2.2-data-typing	2.2-08_native_negative_number	ROUND_TRIP_IDENTICAL	D2.2-2	Native negative number — spec Section 2.2
+2.2-data-typing	2.2-09_single_typed_custom_attr	ROUND_TRIP_IDENTICAL	D2.2-1	Single typed value with custom attribute
+2.2-data-typing	2.2-10_array_typed_values	ROUND_TRIP_IDENTICAL	D2.2-4	Array of typed values — order must be preserved
+2.2-data-typing	2.2-11_multiple_lang_tags	ROUND_TRIP_IDENTICAL	D2.2-4	Multiple lang-tagged strings — order must be preserved
+2.2-data-typing	2.2-12_mixed_typed_native_array	ROUND_TRIP_IDENTICAL	D2.2-3	Mixed native+typed in array — spec allows
+2.2-data-typing	2.2-13_prov_type_qualified_name	ROUND_TRIP_IDENTICAL	D2.2-1	prov:type as QualifiedName value
+2.2-data-typing	2.2-14_prov_location_typed	ROUND_TRIP_IDENTICAL	D2.2-1	prov:location typed value
+2.2-data-typing	2.2-15_prov_value_typed	ROUND_TRIP_IDENTICAL	D2.2-5	prov:value typed — must preserve content
+2.2-data-typing	2.2-16_large_number	ROUND_TRIP_IDENTICAL	D2.2-2	Large number value — must preserve
+2.2-data-typing	2.2-17_empty_string_value	ROUND_TRIP_IDENTICAL	D2.2-1	Empty string typed value
+2.2-data-typing	2.2-18_custom_type	ROUND_TRIP_IDENTICAL	D2.2-1	Custom type URI
+2.2-data-typing	2.2-19_native_string_array	ROUND_TRIP_IDENTICAL	D2.2-7	Native string array — spec Section 2.2
+2.2-data-typing	2.2-20_native_boolean_false	ROUND_TRIP_IDENTICAL	D2.2-2	Native boolean false — spec Section 2.2
+2.2-data-typing	2.2-21_json_null_value	PARSE_FAILED		JSON null — not a defined PROV-JSON value type
+2.2-data-typing	2.2-22_native_int_array	ROUND_TRIP_IDENTICAL	D2.2-3	Native integer array — spec allows
+2.2-data-typing	2.2-23_prov_value_xsd_string	ROUND_TRIP_IDENTICAL	D2.2-5	prov:value xsd:string — must preserve
+2.2-data-typing	2.2-24_prov_label_single_lang	ROUND_TRIP_IDENTICAL	D2.2-1	prov:label with lang string
+2.2-data-typing	2.2-25_mixed_prov_and_custom_attrs	ROUND_TRIP_IDENTICAL	D2.2-1,D2.2-2	Mixed prov + custom attributes
+2.2-data-typing	2.2-26_reparse_broken_output	ROUND_TRIP_IDENTICAL		Re-parse of ProvToolbox output — stability test
+2.2-data-typing	2.2-27_typed_xsd_string_vs_native	ROUND_TRIP_IDENTICAL	D2.2-1	Typed xsd:string vs native string
+2.2-data-typing	2.2-28_native_string_with_xsd_prefix	ROUND_TRIP_IDENTICAL	D2.2-2	Native string even with xsd prefix declared
+3.1.1-entity	3.1.1-01_spec_example5	ROUND_TRIP_IDENTICAL	D3.1.1-1	Spec Example 5 — must round-trip per spec
+3.1.1-entity	3.1.1-02_entity_no_attributes	ROUND_TRIP_IDENTICAL		Empty entity — valid PROV-JSON
+3.1.1-entity	3.1.1-03_multiple_entities	ROUND_TRIP_IDENTICAL	D3.1.1-4	Multiple entities — valid PROV-JSON
+3.1.1-entity	3.1.1-04_all_prov_attrs	ROUND_TRIP_IDENTICAL	D2.2-1,D3.1.1-7	All prov attrs including role
+3.1.1-entity	3.1.1-05_many_custom_attrs	ROUND_TRIP_IDENTICAL	D2.2-1	Many custom attributes
+3.1.1-entity	3.1.1-06_collection_entity	ROUND_TRIP_IDENTICAL	D2.2-1	Collection entity with prov:type
+3.1.1-entity	3.1.1-07_no_prefix_section	ROUND_TRIP_IDENTICAL	D2.1-1	Entity without prefix section — prefix is optional
+3.1.1-entity	3.1.1-08_duplicate_entity_id	ROUND_TRIP_IDENTICAL	D3.1.1-5	Duplicate JSON keys — undefined per JSON spec (edge case)
+3.1.1-entity	3.1.1-09_long_entity_id	ROUND_TRIP_IDENTICAL	D2.2-1	Long entity identifier
+3.1.1-entity	3.1.1-10_entity_with_activity_agent	ROUND_TRIP_IDENTICAL	D2.2-1	Entity + Activity + Agent combined
+3.1.1-entity	3.1.1-11_prov_type_native_string	ROUND_TRIP_IDENTICAL	D2.2-2	prov:type as native string — spec allows
+3.1.1-entity	3.1.1-12_empty_entity_section	ROUND_TRIP_IDENTICAL	D3.1.1-8	Empty entity section — valid JSON
+3.1.1-entity	3.1.1-13_multiple_prov_types	ROUND_TRIP_IDENTICAL	D2.2-4	Multiple prov:types in array
+3.1.1-entity	3.1.1-14_collection_with_members	ROUND_TRIP_IDENTICAL	D3.1.1-3	Collection with hadMember — valid PROV-JSON
+3.1.1-entity	3.1.1-15_hadmember_array_syntax	ROUND_TRIP_IDENTICAL	D3.2.1-1	hadMember array syntax
+3.1.1-entity	3.1.1-16_hadmember_multi_entity	ROUND_TRIP_IDENTICAL	D3.2.1-1	hadMember with multiple entities
+3.1.1-entity	3.1.1-17_two_prov_types	ROUND_TRIP_IDENTICAL	D2.2-1	Two prov:types
+3.1.1-entity	3.1.1-18_prov_value_only	ROUND_TRIP_IDENTICAL	D2.2-5	prov:value as only attribute
+3.1.1-entity	3.1.1-19_prov_type_typed_string	ROUND_TRIP_IDENTICAL	D2.2-1	prov:type as typed string
+3.1.1-entity	3.1.1-20_prov_role	ROUND_TRIP_IDENTICAL	D3.1.1-7	prov:role on entity — spec allows
+3.1.1-entity	3.1.1-21_entity_only_no_other_sections	ROUND_TRIP_IDENTICAL	D2.2-1	Entity only document
+3.1.1-entity	3.1.1-22_prov_value_qualified_name	ROUND_TRIP_IDENTICAL	D3.1.1-2	prov:value as QualifiedName
+3.1.2-agent	3.1.2-01_spec_example7	ROUND_TRIP_IDENTICAL	D2.2-2	Spec Example 7 — must round-trip
+3.1.2-agent	3.1.2-02_agent_typed_attrs	ROUND_TRIP_IDENTICAL	D2.2-1	Agent with typed attributes
+3.1.2-agent	3.1.2-03_multiple_agents	ROUND_TRIP_IDENTICAL	D3.1.1-4	Multiple agents
+3.1.2-agent	3.1.2-04_agent_prov_label	ROUND_TRIP_IDENTICAL	D2.2-1	Agent with prov:label
+3.1.2-agent	3.1.2-05_agent_prov_location	ROUND_TRIP_IDENTICAL	D2.2-1	Agent with prov:location
+3.1.2-agent	3.1.2-06_agent_prov_value	ROUND_TRIP_IDENTICAL	D3.1.2-1	Agent with prov:value — must preserve
+3.1.2-agent	3.1.2-07_agent_prov_role	ROUND_TRIP_IDENTICAL	D3.1.1-7	Agent with prov:role — spec allows
+3.1.2-agent	3.1.2-08_empty_agent_section	ROUND_TRIP_IDENTICAL	D3.1.1-8	Empty agent section
+3.1.2-agent	3.1.2-09_agent_plus_entity	ROUND_TRIP_IDENTICAL	D2.2-1	Agent + Entity combined
+3.1.2-agent	3.1.2-10_agent_multivalue_attr	ROUND_TRIP_IDENTICAL	D3.1.2-2	Agent multi-value attribute
+3.1.2-agent	3.1.2-11_agent_no_prefix	ROUND_TRIP_IDENTICAL	D2.1-1	Agent without prefix — prefix is optional
+3.1.2-agent	3.1.2-12_agent_blank_node	ROUND_TRIP_IDENTICAL	D2.1-2	Agent with blank node ID — spec allows
+3.1.2-agent	3.1.2-13_agent_prov_value_int	ROUND_TRIP_IDENTICAL	D3.1.2-1	Agent prov:value int — must preserve
+3.1.2-agent	3.1.2-14_agent_multivalue_qname	ROUND_TRIP_IDENTICAL	D2.2-4	Agent multi-value QualifiedName
+3.1.2-agent	3.1.2-15_agent_label_lang	ROUND_TRIP_IDENTICAL	D2.2-1	Agent prov:label with lang tag
+3.1.3-activity	3.1.3-01_spec_example9	ROUND_TRIP_IDENTICAL	D3.1.3-1,D2.2-2	Spec Example 9 — must round-trip
+3.1.3-activity	3.1.3-02_activity_typed_attrs	ROUND_TRIP_IDENTICAL	D3.1.3-1,D2.2-1	Activity with typed attrs and times
+3.1.3-activity	3.1.3-03_start_time_only	ROUND_TRIP_IDENTICAL	D3.1.3-1	Start time only — must preserve format
+3.1.3-activity	3.1.3-04_end_time_only	ROUND_TRIP_IDENTICAL	D3.1.3-1	End time only — must preserve format
+3.1.3-activity	3.1.3-05_no_times	ROUND_TRIP_IDENTICAL	D2.2-1	Activity with no times
+3.1.3-activity	3.1.3-06_multiple_activities	ROUND_TRIP_IDENTICAL	D3.1.1-4,D3.1.3-1	Multiple activities
+3.1.3-activity	3.1.3-07_activity_prov_value	ROUND_TRIP_IDENTICAL	D3.1.2-1	Activity prov:value — must preserve
+3.1.3-activity	3.1.3-08_activity_prov_role	ROUND_TRIP_IDENTICAL	D3.1.1-7	Activity prov:role — spec allows
+3.1.3-activity	3.1.3-09_all_three_elements	ROUND_TRIP_IDENTICAL	D3.1.3-1,D2.2-1	All three element types
+3.1.3-activity	3.1.3-10_time_precision	ROUND_TRIP_IDENTICAL	D3.1.3-1	Time precision — sub-ms must be preserved
+3.1.3-activity	3.1.3-11_empty_activity_section	ROUND_TRIP_IDENTICAL	D3.1.1-8	Empty activity section
+3.1.3-activity	3.1.3-12_activity_no_prefix	ROUND_TRIP_IDENTICAL	D2.1-1	Activity without prefix — prefix is optional
+3.1.3-activity	3.1.3-13_time_prenormalized	ROUND_TRIP_IDENTICAL		Pre-normalized time format
+3.1.3-activity	3.1.3-14_time_date_only	ROUND_TRIP_IDENTICAL	D3.1.3-1	Date-only time — must preserve format
+3.2.1-generation	3.2.1-01_spec_example11	ROUND_TRIP_IDENTICAL	D2.2-2,D3.1.3-1,D3.2.1-1	Spec Example 11 — must round-trip
+3.2.1-generation	3.2.1-02_generation_typed_prenorm	ROUND_TRIP_IDENTICAL	D2.2-1	Typed attr + pre-normalized time
+3.2.1-generation	3.2.1-03_anonymous_generation	ROUND_TRIP_IDENTICAL	D3.2.1-1	Anonymous generation — blank node must preserve
+3.2.1-generation	3.2.1-04_named_generation	ROUND_TRIP_IDENTICAL		Named generation — minimal valid
+3.2.1-generation	3.2.1-05_generation_prov_role	ROUND_TRIP_IDENTICAL	D3.2.1-2,D2.2-1	Generation with prov:role
+3.2.1-generation	3.2.1-06_no_activity	ROUND_TRIP_IDENTICAL		Generation with no activity field
+3.2.1-generation	3.2.1-07_no_time	ROUND_TRIP_IDENTICAL	D2.2-1	Generation with no time, has prov:type
+3.2.1-generation	3.2.1-08_multiple_generations	ROUND_TRIP_IDENTICAL	D3.1.1-4	Multiple generation records
+3.2.1-generation	3.2.1-09_full_provenance	ROUND_TRIP_IDENTICAL	D2.2-1	Full provenance chain
+3.2.1-generation	3.2.1-10_empty_wgb_section	ROUND_TRIP_IDENTICAL	D3.1.1-8	Empty wasGeneratedBy section
+3.2.1-generation	3.2.1-11_no_prefix	ROUND_TRIP_IDENTICAL	D2.1-1	No prefix — prefix is optional
+3.2.2-usage	3.2.2-01_spec_example13	ROUND_TRIP_IDENTICAL	D2.2-2,D3.1.3-1,D3.2.1-1,D3.2.2-1	Spec Example 13 — must round-trip
+3.2.2-usage	3.2.2-02_named_minimal	ROUND_TRIP_IDENTICAL	D3.2.2-1	Named minimal usage
+3.2.2-usage	3.2.2-03_anonymous_blank_node	ROUND_TRIP_IDENTICAL	D3.2.1-1,D3.2.2-1	Anonymous usage with blank node
+3.2.2-usage	3.2.2-04_usage_prov_role	ROUND_TRIP_IDENTICAL	D3.2.1-2,D2.2-1,D3.2.2-1	Usage with prov:role
+3.2.2-usage	3.2.2-05_typed_prenorm_time	ROUND_TRIP_IDENTICAL	D2.2-1,D3.2.2-1	Usage with typed attr + time
+3.2.2-usage	3.2.2-06_no_prefix	ROUND_TRIP_IDENTICAL	D2.1-1	No prefix — prefix is optional
+3.2.3-communication	3.2.3-01_named_minimal	ROUND_TRIP_IDENTICAL		Named communication — valid
+3.2.3-communication	3.2.3-02_anonymous	ROUND_TRIP_IDENTICAL	D3.2.1-1	Anonymous communication
+3.2.4-start	3.2.4-01_named_minimal	ROUND_TRIP_IDENTICAL		Named start — valid
+3.2.4-start	3.2.4-02_with_time	ROUND_TRIP_IDENTICAL		Start with pre-normalized time
+3.2.4-start	3.2.4-03_with_starter	ROUND_TRIP_IDENTICAL		Start with starter activity
+3.2.5-end	3.2.5-01_named_minimal	ROUND_TRIP_IDENTICAL		Named end — valid
+3.2.6-invalidation	3.2.6-01_named_minimal	ROUND_TRIP_IDENTICAL		Named invalidation — valid
+3.2.6-invalidation	3.2.6-02_with_time	ROUND_TRIP_IDENTICAL		Invalidation with pre-normalized time
+3.2.7-derivation	3.2.7-01_named_minimal	ROUND_TRIP_IDENTICAL		Named derivation — valid
+3.2.7-derivation	3.2.7-02_full_derivation	ROUND_TRIP_IDENTICAL		Full derivation (all 5 fields)
+3.2.7-derivation	3.2.7-03_revision_type	ROUND_TRIP_IDENTICAL	D2.2-1	Derivation with prov:type revision
+3.2.8-attribution	3.2.8-01_named_minimal	ROUND_TRIP_IDENTICAL		Named attribution — valid
+3.2.9-association	3.2.9-01_named_minimal	ROUND_TRIP_IDENTICAL		Named association — valid
+3.2.9-association	3.2.9-02_with_plan	ROUND_TRIP_IDENTICAL		Association with plan
+3.2.9-association	3.2.9-03_with_role	ROUND_TRIP_IDENTICAL	D2.2-1,D3.2.1-2	Association with prov:role
+3.2.10-delegation	3.2.10-01_named_minimal	ROUND_TRIP_IDENTICAL		Named delegation — valid
+3.2.10-delegation	3.2.10-02_with_activity	ROUND_TRIP_IDENTICAL		Delegation with activity
+3.2.11-influence	3.2.11-01_named_minimal	ROUND_TRIP_IDENTICAL		Named influence — valid
+3.2.12-specialization	3.2.12-01_basic	ROUND_TRIP_IDENTICAL	D3.2.1-1	Basic specialization
+3.2.13-alternate	3.2.13-01_basic	ROUND_TRIP_IDENTICAL	D3.2.1-1	Basic alternate
+3.2.14-membership	3.2.14-01_single_member	ROUND_TRIP_IDENTICAL	D3.2.1-1	Single member
+3.2.14-membership	3.2.14-02_multi_member	ROUND_TRIP_IDENTICAL	D3.2.1-1	Multiple members
+3.3-bundles	3.3-01_minimal_bundle	ROUND_TRIP_IDENTICAL	D3.3-1	Minimal bundle — spec Section 3.3
+3.3-bundles	3.3-02_bundle_with_relation	ROUND_TRIP_IDENTICAL	D3.3-1	Bundle containing a relation
+3.3-bundles	3.3-03_toplevel_plus_bundle	ROUND_TRIP_IDENTICAL	D3.3-1	Top-level statements + bundle
+3.3-bundles	3.3-04_multiple_bundles	ROUND_TRIP_IDENTICAL	D3.3-1	Multiple bundles
+3.3-bundles	3.3-05_empty_bundle	ROUND_TRIP_IDENTICAL	D3.3-1	Empty bundle
+3.3-bundles	3.3-06_bundle_with_prefix	ROUND_TRIP_IDENTICAL	D3.3-1	Bundle with own prefix section
+A.1-authors-view	A.1-01_spec_example42	ROUND_TRIP_IDENTICAL	D2.2-2,D2.2-1,D3.2.1-1	Spec Example 42 — full authors view
+A.2-process-view	A.2-01_spec_example43	ROUND_TRIP_IDENTICAL	D2.2-2,D2.2-1,D3.2.1-1	Spec Example 43 — full process view
+A.3-attribution	A.3-01_spec_example44_simplified	ROUND_TRIP_IDENTICAL	D3.3-1	Spec Example 44 — attribution with bundle
+B.1-dict-membership	B.1-01_spec_example46	ROUND_TRIP_IDENTICAL	D-DICT-1	Spec Example 46 — dictionary membership
+B.2-dict-insertion	B.2-01_spec_example48	ROUND_TRIP_IDENTICAL	D-DICT-1	Spec Example 48 — dictionary insertion
+B.3-dict-removal	B.3-01_spec_example52	ROUND_TRIP_IDENTICAL	D-DICT-1	Spec Example 52 — dictionary removal

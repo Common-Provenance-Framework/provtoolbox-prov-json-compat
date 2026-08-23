@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "default": "http://example.org/",
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "e1": {
+      "ex:info": [
+        {"$": "2023-01-15", "type": "xsd:date"},
+        "some text",
+        42
+      ]
+    }
+  }
+}

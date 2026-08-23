@@ -1,0 +1,10 @@
+{
+  "prefix": {
+    "ex": "http://example.org/",
+    "other": "http://example.org/"
+  },
+  "agent": {
+    "ex:alice": {},
+    "other:alice": {}
+  }
+}

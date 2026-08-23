@@ -1,0 +1,10 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "agent": {
+    "ex:ag1": {
+      "prov:location": {"$": "London", "type": "xsd:string"}
+    }
+  }
+}

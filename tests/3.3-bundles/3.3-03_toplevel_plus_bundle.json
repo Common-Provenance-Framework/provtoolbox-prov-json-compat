@@ -1,0 +1,16 @@
+{
+  "prefix": { "ex": "http://example.org/" },
+  "entity": {
+    "ex:report1": {},
+    "ex:bundle1": {
+      "prov:type": {"$": "prov:Bundle", "type": "prov:QualifiedName"}
+    }
+  },
+  "bundle": {
+    "ex:bundle1": {
+      "entity": {
+        "ex:report1": {}
+      }
+    }
+  }
+}

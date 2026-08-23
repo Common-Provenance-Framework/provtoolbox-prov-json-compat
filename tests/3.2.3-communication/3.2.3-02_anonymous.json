@@ -1,0 +1,9 @@
+{
+  "prefix": { "ex": "http://example.org/" },
+  "wasInformedBy": {
+    "_:inf1": {
+      "prov:informed": "ex:a2",
+      "prov:informant": "ex:a1"
+    }
+  }
+}

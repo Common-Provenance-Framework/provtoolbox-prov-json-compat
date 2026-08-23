@@ -1,0 +1,10 @@
+{
+  "prefix": {
+    "default": "http://example.org/default/",
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "e1": {},
+    "ex:e2": {}
+  }
+}

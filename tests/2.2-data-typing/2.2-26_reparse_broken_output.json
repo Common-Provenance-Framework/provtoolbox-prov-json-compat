@@ -1,0 +1,13 @@
+{
+  "prefix" : {
+    "default" : "http://example.org/",
+    "ex" : "http://example.org/"
+  },
+  "entity" : {
+    "e1" : {
+      "ex:byteSize" : [ "xsd:positiveInteger", "1034" ],
+      "ex:content" : [ "xsd:base64Binary", "Y29udGVudCBoZXJl" ],
+      "ex:compression" : [ "82.5e-2", "xsd:double" ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+    "prefix": {
+        "ex": "http://example.org",
+        "w3": "http://www.w3.org/"
+    },
+    "entity": {
+        "ex:author-view": {
+            "prov:type": {
+                "$": "prov:Bundle",
+                "type": "prov:QualifiedName"
+            }
+        }
+    },
+    "bundle": {
+        "ex:author-view": {
+            "agent": {
+                "ex:Paolo": {
+                    "prov:type": {
+                        "$": "prov:Person",
+                        "type": "prov:QualifiedName"
+                    }
+                }
+            }
+        }
+    },
+    "wasAttributedTo": {
+        "_:wAT7": {
+            "prov:agent": "ex:Simon",
+            "prov:entity": "ex:author-view"
+        }
+    }
+}

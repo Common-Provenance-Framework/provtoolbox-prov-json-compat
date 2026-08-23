@@ -1,0 +1,10 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:this-is-a-very-long-entity-identifier-name-that-tests-whether-provtoolbox-handles-lengthy-qualified-names-correctly-2023-06-15T10-30-00Z": {
+      "prov:type": {"$": "ex:LongNameTest", "type": "prov:QUALIFIED_NAME"}
+    }
+  }
+}

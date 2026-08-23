@@ -1,0 +1,9 @@
+{
+  "prefix": { "ex": "http://example.org/" },
+  "wasInvalidatedBy": {
+    "ex:inv1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1"
+    }
+  }
+}

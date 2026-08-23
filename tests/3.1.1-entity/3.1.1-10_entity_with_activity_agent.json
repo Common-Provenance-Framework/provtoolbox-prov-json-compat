@@ -1,0 +1,18 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {
+      "prov:type": {"$": "ex:Document", "type": "prov:QUALIFIED_NAME"}
+    }
+  },
+  "activity": {
+    "ex:a1": {}
+  },
+  "agent": {
+    "ex:ag1": {
+      "prov:label": {"$": "Alice", "lang": "en"}
+    }
+  }
+}

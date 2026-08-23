@@ -1,0 +1,54 @@
+{
+    "prefix": {
+        "ex": "http://example.org/"
+    },
+    "entity": {
+        "ex:d0": {
+            "prov:type": {
+                "$": "prov:EmptyDictionary",
+                "type": "prov:QualifiedName"
+            }
+        },
+        "ex:e1": {},
+        "ex:e2": {},
+        "ex:e3": {},
+        "ex:d1": {
+            "prov:type": {
+                "$": "prov:Dictionary",
+                "type": "prov:QualifiedName"
+            }
+        },
+        "ex:d2": {
+            "prov:type": {
+                "$": "prov:Dictionary",
+                "type": "prov:QualifiedName"
+            }
+        }
+    },
+    "derivedByInsertionFrom": {
+        "_:dBIF1": {
+            "prov:after": "ex:d1",
+            "prov:before": "ex:d0",
+            "prov:key-entity-set": [
+                {
+                    "key": "k1",
+                    "$": "ex:e1"
+                },
+                {
+                    "key": "k2",
+                    "$": "ex:e2"
+                }
+            ]
+        },
+        "_:dBIF2": {
+            "prov:after": "ex:d2",
+            "prov:before": "ex:d1",
+            "prov:key-entity-set": [
+                {
+                    "key": "k3",
+                    "$": "ex:e3"
+                }
+            ]
+        }
+    }
+}

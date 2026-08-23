@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "default": "http://example.org/",
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "e1": {
+      "ex:scores": [
+        {"$": "95", "type": "xsd:int"},
+        {"$": "87", "type": "xsd:int"},
+        {"$": "72", "type": "xsd:int"}
+      ]
+    }
+  }
+}

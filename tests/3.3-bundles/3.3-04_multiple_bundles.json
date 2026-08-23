@@ -1,0 +1,19 @@
+{
+  "prefix": {
+    "ex": "http://example.org/",
+    "bob": "http://example.org/bob/",
+    "alice": "http://example.org/alice/"
+  },
+  "bundle": {
+    "bob:bundle1": {
+      "entity": {
+        "ex:e1": {}
+      }
+    },
+    "alice:bundle2": {
+      "entity": {
+        "ex:e2": {}
+      }
+    }
+  }
+}

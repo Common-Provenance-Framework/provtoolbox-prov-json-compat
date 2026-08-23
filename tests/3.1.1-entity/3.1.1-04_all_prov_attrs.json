@@ -1,0 +1,13 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {
+      "prov:type": {"$": "ex:File", "type": "prov:QUALIFIED_NAME"},
+      "prov:label": {"$": "My File", "lang": "en"},
+      "prov:location": {"$": "/data/file.csv", "type": "xsd:string"},
+      "prov:value": {"$": "contents here", "type": "xsd:string"}
+    }
+  }
+}

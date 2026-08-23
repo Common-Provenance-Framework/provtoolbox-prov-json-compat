@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {
+      "prov:type": {"$": "ex:First", "type": "prov:QUALIFIED_NAME"},
+      "ex:note": {"$": "I am the first", "type": "xsd:string"}
+    },
+    "ex:e1": {
+      "prov:type": {"$": "ex:Second", "type": "prov:QUALIFIED_NAME"},
+      "ex:note": {"$": "I am the second", "type": "xsd:string"}
+    }
+  }
+}

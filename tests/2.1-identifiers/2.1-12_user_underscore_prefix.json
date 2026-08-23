@@ -1,0 +1,9 @@
+{
+  "prefix": {
+    "ex": "http://example.org/",
+    "_": "http://example.org/my-blanks/"
+  },
+  "entity": {
+    "ex:e1": {}
+  }
+}

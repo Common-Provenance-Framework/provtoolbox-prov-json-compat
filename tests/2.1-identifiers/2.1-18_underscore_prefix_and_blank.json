@@ -1,0 +1,19 @@
+{
+  "prefix": {
+    "ex": "http://example.org/",
+    "_": "http://example.org/my-blanks/"
+  },
+  "entity": {
+    "_:blank1": {},
+    "ex:e1": {}
+  },
+  "wasGeneratedBy": {
+    "_:wgb1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1"
+    }
+  },
+  "activity": {
+    "ex:a1": {}
+  }
+}

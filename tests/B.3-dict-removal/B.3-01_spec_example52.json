@@ -1,0 +1,42 @@
+{
+    "prefix": {
+        "ex": "http://example.org/"
+    },
+    "entity": {
+        "ex:d2": {
+            "prov:type": {
+                "$": "prov:Dictionary",
+                "type": "prov:QualifiedName"
+            }
+        },
+        "ex:d3": {
+            "prov:type": {
+                "$": "prov:Dictionary",
+                "type": "prov:QualifiedName"
+            }
+        },
+        "ex:d4": {
+            "prov:type": {
+                "$": "prov:Dictionary",
+                "type": "prov:QualifiedName"
+            }
+        }
+    },
+    "derivedByRemovalFrom": {
+        "_:dBRF1": {
+            "prov:after": "ex:d3",
+            "prov:before": "ex:d2",
+            "prov:key-set": [
+                "k1",
+                "k3"
+            ]
+        },
+        "_:dBRF2": {
+            "prov:after": "ex:d4",
+            "prov:before": "ex:d3",
+            "prov:key-set": [
+                "k1"
+            ]
+        }
+    }
+}

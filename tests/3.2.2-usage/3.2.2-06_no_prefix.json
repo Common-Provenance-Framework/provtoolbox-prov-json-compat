@@ -1,0 +1,8 @@
+{
+  "used": {
+    "ex:use1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1"
+    }
+  }
+}

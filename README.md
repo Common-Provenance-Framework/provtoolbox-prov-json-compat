@@ -118,6 +118,8 @@ When all tests match their expected outcomes:
 - **PARSE_FAILED**: ~26 tests — input rejected (some legitimately, some due to bugs)
 - **SERIALIZE_FAILED**: ~14 tests — parses but can't re-serialize
 
+Full results with input/output JSON for every test are in [compatibility_results.xlsx](compatibility_results.xlsx) (3 sheets: All Tests, Summary, Issues).
+
 **22 distinct compatibility issues** documented in [ISSUES.md](ISSUES.md), including:
 - 8 Critical (data loss or crashes on valid input)
 - 8 High (format corruption or silent data changes)
@@ -131,6 +133,8 @@ provtoolbox-prov-json-compat/
 ├── run_tests.sh              ← Main test runner
 ├── README.md
 ├── ISSUES.md                 ← Full issue catalog (22 issues)
+├── RESULTS.html              ← Interactive HTML report (collapsible test cards)
+├── compatibility_results.xlsx ← Full results spreadsheet (all 156 tests with input/output JSON)
 ├── harness/
 │   └── JsonRoundTrip.java    ← Round-trip test harness
 └── tests/

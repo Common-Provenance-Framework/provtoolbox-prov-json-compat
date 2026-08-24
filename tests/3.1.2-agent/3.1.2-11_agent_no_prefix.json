@@ -1,7 +1,0 @@
-{
-  "agent": {
-    "ex:ag1": {
-      "prov:type": {"$": "prov:Person", "type": "prov:QualifiedName"}
-    }
-  }
-}

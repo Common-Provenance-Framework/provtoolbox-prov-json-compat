@@ -1,9 +1,0 @@
-{
-  "prefix": {
-    "ex": "http://example.org/"
-  },
-  "activity": {
-    "_:act1": {},
-    "ex:a2": {}
-  }
-}

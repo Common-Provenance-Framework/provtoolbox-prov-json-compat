@@ -1,9 +1,0 @@
-{
-  "prefix": {
-    "ex": "http://example.org/"
-  },
-  "entity": {
-    "_:blank1": {},
-    "_:blank2": {}
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "entity": {
-    "prov:e1": {
-      "prov:type": {"$": "prov:Collection", "type": "prov:QUALIFIED_NAME"}
-    }
-  }
-}

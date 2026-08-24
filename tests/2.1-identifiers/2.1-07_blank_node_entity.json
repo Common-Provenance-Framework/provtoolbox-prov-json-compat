@@ -1,9 +1,0 @@
-{
-  "prefix": {
-    "ex": "http://example.org/"
-  },
-  "entity": {
-    "_:e1": {},
-    "ex:e2": {}
-  }
-}

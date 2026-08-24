@@ -74,6 +74,7 @@ TOOLBOX=""
 for candidate in \
   "$SCRIPT_DIR/../ProvToolbox-master" \
   "$SCRIPT_DIR/ProvToolbox-master" \
+  "$SCRIPT_DIR/Prov Toolbox vs JSON/ProvToolbox-master" \
   "$SCRIPT_DIR/../Prov Toolbox vs JSON/ProvToolbox-master" \
   "$HOME/Desktop/Prov Toolbox vs JSON/ProvToolbox-master" \
   "${PROVTOOLBOX_HOME:-/nonexistent}"; do

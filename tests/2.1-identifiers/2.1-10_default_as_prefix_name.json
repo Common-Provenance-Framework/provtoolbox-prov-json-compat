@@ -1,8 +1,0 @@
-{
-  "prefix": {
-    "default": "http://example.org/default/"
-  },
-  "entity": {
-    "default:foo": {}
-  }
-}

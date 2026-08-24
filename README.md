@@ -78,17 +78,17 @@ cd provtoolbox-prov-json-compat
 
 ## Test Coverage
 
-156 tests across 26 spec subsections:
+135 tests across 26 spec subsections:
 
 | Section | Topic | Tests |
 |---|---|---|
-| 2.1 | Identifiers & Qualified Names | 26 |
+| 2.1 | Identifiers & Qualified Names | 11 |
 | 2.2 | Data Typing & Internationalization | 28 |
-| 3.1.1 | Entity | 22 |
-| 3.1.2 | Agent | 15 |
-| 3.1.3 | Activity | 14 |
-| 3.2.1 | Generation | 11 |
-| 3.2.2 | Usage | 6 |
+| 3.1.1 | Entity | 21 |
+| 3.1.2 | Agent | 13 |
+| 3.1.3 | Activity | 13 |
+| 3.2.1 | Generation | 10 |
+| 3.2.2 | Usage | 5 |
 | 3.2.3 | Communication | 2 |
 | 3.2.4 | Start | 3 |
 | 3.2.5 | End | 1 |
@@ -111,20 +111,22 @@ cd provtoolbox-prov-json-compat
 
 ## Results Summary
 
-When all tests match their expected outcomes:
+Actual ProvToolbox v2.2.4 verdict distribution across 135 tests:
 
-- **ROUND_TRIP_IDENTICAL**: ~20 tests — ProvToolbox handles these correctly
-- **ROUND_TRIP_CHANGED**: ~96 tests — data survives but output format differs
-- **PARSE_FAILED**: ~26 tests — input rejected (some legitimately, some due to bugs)
-- **SERIALIZE_FAILED**: ~14 tests — parses but can't re-serialize
+- **ROUND_TRIP_IDENTICAL**: 22 tests (16%) — ProvToolbox handles these correctly
+- **ROUND_TRIP_CHANGED**: 97 tests (72%) — data survives but output format differs
+- **PARSE_FAILED**: 13 tests (10%) — input rejected (2 legitimately, 11 due to bugs)
+- **SERIALIZE_FAILED**: 3 tests (2%) — parses OK but crashes on re-serialization
+
+24 of 135 tests pass (18%). A test passes when ProvToolbox produces the spec-correct outcome.
 
 Full results with input/output JSON for every test are in [compatibility_results.xlsx](compatibility_results.xlsx) (3 sheets: All Tests, Summary, Issues).
 
-**22 distinct compatibility issues** documented in [ISSUES.md](ISSUES.md), including:
-- 8 Critical (data loss or crashes on valid input)
+**19 distinct compatibility issues** documented in [ISSUES.md](ISSUES.md), cross-checked against the [PROV-JSON W3C spec](https://www.w3.org/Submission/2013/SUBM-prov-json-20130424/):
+- 5 Critical (data loss or crashes on valid input)
 - 8 High (format corruption or silent data changes)
-- 3 Medium (ordering or naming issues)
-- 3 Low/Info (cosmetic differences)
+- 2 Medium (ordering issues)
+- 4 Low/Info (cosmetic differences)
 
 ## Repository Structure
 
@@ -132,9 +134,9 @@ Full results with input/output JSON for every test are in [compatibility_results
 provtoolbox-prov-json-compat/
 ├── run_tests.sh              ← Main test runner
 ├── README.md
-├── ISSUES.md                 ← Full issue catalog (22 issues)
-├── RESULTS.html              ← Interactive HTML report (collapsible test cards)
-├── compatibility_results.xlsx ← Full results spreadsheet (all 156 tests with input/output JSON)
+├── ISSUES.md                 ← Full issue catalog (19 issues, spec cross-checked)
+├── issues_report.xlsx        ← Issues-only report with severity, evidence, summaries
+├── compatibility_results.xlsx ← Full results spreadsheet (all 135 tests with input/output JSON)
 ├── harness/
 │   └── JsonRoundTrip.java    ← Round-trip test harness
 └── tests/

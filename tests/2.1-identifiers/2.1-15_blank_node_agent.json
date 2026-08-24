@@ -1,9 +1,0 @@
-{
-  "prefix": {
-    "ex": "http://example.org/"
-  },
-  "agent": {
-    "_:ag1": {},
-    "ex:ag2": {}
-  }
-}

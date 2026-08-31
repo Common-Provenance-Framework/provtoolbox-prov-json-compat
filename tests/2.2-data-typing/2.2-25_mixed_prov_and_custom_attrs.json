@@ -1,0 +1,14 @@
+{
+  "prefix": {
+    "default": "http://example.org/",
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "e1": {
+      "prov:type": {"$": "ex:Document", "type": "prov:QUALIFIED_NAME"},
+      "prov:label": {"$": "My Doc", "lang": "en"},
+      "ex:version": {"$": "2", "type": "xsd:int"},
+      "ex:author": {"$": "Alice", "type": "xsd:string"}
+    }
+  }
+}

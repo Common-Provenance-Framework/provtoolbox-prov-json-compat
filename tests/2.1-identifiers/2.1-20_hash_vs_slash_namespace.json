@@ -1,0 +1,10 @@
+{
+  "prefix": {
+    "hash": "http://example.org#",
+    "slash": "http://example.org/"
+  },
+  "entity": {
+    "hash:e1": {},
+    "slash:e2": {}
+  }
+}

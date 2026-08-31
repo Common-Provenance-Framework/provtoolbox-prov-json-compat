@@ -1,0 +1,16 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "activity": {
+    "ex:a1": {
+      "prov:startTime": "2011-11-16T16:05:00",
+      "prov:endTime": "2011-11-16T16:06:00",
+      "ex:host": {"$": "server.example.org", "type": "xsd:string"},
+      "prov:type": {
+        "$": "ex:edit",
+        "type": "prov:QualifiedName"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "agent": {
+    "ex:e1": {
+      "ex:employee": "1234",
+      "ex:name": "Alice",
+      "prov:type": {
+        "$": "prov:Person",
+        "type": "prov:QualifiedName"
+      }
+    }
+  }
+}

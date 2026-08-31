@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "agent": {
+    "ex:ag1": {
+      "ex:employee": {"$": "1234", "type": "xsd:string"},
+      "ex:name": {"$": "Alice", "type": "xsd:string"},
+      "prov:type": {
+        "$": "prov:Person",
+        "type": "prov:QualifiedName"
+      }
+    }
+  }
+}

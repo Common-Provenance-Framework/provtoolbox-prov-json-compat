@@ -1,0 +1,11 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {
+      "prov:type": [{"$": "ex:MyType", "type": "prov:QUALIFIED_NAME"}],
+      "ex:age": [{"$": "25", "type": "xsd:int"}]
+    }
+  }
+}

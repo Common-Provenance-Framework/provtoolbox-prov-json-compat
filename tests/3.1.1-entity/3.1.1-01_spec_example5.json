@@ -1,0 +1,12 @@
+{
+  "prefix": {
+    "tr": "http://www.w3.org/TR/2011/",
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "tr:WD-prov-dm-20111215": {
+      "prov:type": "document",
+      "ex:version": "2"
+    }
+  }
+}

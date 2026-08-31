@@ -1,0 +1,12 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {"prov:type": {"$": "ex:Document", "type": "prov:QUALIFIED_NAME"}},
+    "ex:e2": {"prov:type": {"$": "ex:Image", "type": "prov:QUALIFIED_NAME"}},
+    "ex:e3": {"prov:type": {"$": "ex:Report", "type": "prov:QUALIFIED_NAME"}},
+    "ex:e4": {},
+    "ex:e5": {"prov:label": {"$": "Fifth", "lang": "en"}}
+  }
+}

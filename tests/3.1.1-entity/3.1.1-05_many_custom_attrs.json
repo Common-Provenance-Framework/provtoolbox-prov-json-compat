@@ -1,0 +1,16 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:dataset1": {
+      "ex:creator": {"$": "Alice", "type": "xsd:string"},
+      "ex:created": {"$": "2023-06-15", "type": "xsd:date"},
+      "ex:format": {"$": "CSV", "type": "xsd:string"},
+      "ex:size": {"$": "1048576", "type": "xsd:long"},
+      "ex:rows": {"$": "50000", "type": "xsd:int"},
+      "ex:compressed": {"$": "false", "type": "xsd:boolean"},
+      "ex:checksum": {"$": "abc123def456", "type": "xsd:string"}
+    }
+  }
+}

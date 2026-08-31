@@ -1,0 +1,27 @@
+{
+    "prefix": {
+        "ex": "http://example.org/"
+    },
+    "entity": {
+        "ex:d": {
+            "prov:type": {
+                "$": "prov:Dictionary",
+                "type": "prov:QualifiedName"
+            }
+        },
+        "ex:e1": {},
+        "ex:e2": {}
+    },
+    "hadDictionaryMember": {
+        "_:hDM1": {
+            "prov:dictionary": "ex:d",
+            "prov:entity": "ex:e1",
+            "prov:key": "k1"
+        },
+        "_:hDM2": {
+            "prov:dictionary": "ex:d",
+            "prov:entity": "ex:e2",
+            "prov:key": "k2"
+        }
+    }
+}

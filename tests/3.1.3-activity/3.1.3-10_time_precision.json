@@ -1,0 +1,15 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "activity": {
+    "ex:a1": {
+      "prov:startTime": "2011-11-16T16:05:00.123",
+      "prov:endTime": "2011-11-16T16:06:00+01:00"
+    },
+    "ex:a2": {
+      "prov:startTime": "2011-11-16T16:05:00Z",
+      "prov:endTime": "2011-11-16T16:06:00.456789Z"
+    }
+  }
+}

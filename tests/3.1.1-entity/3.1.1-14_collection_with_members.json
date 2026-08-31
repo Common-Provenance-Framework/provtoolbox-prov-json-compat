@@ -1,0 +1,27 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:collection1": {
+      "prov:type": {"$": "prov:Collection", "type": "prov:QUALIFIED_NAME"},
+      "prov:label": {"$": "Dataset Collection", "lang": "en"}
+    },
+    "ex:item1": {
+      "prov:type": {"$": "ex:DataItem", "type": "prov:QUALIFIED_NAME"}
+    },
+    "ex:item2": {
+      "prov:type": {"$": "ex:DataItem", "type": "prov:QUALIFIED_NAME"}
+    }
+  },
+  "hadMember": {
+    "_:m1": {
+      "prov:collection": "ex:collection1",
+      "prov:entity": "ex:item1"
+    },
+    "_:m2": {
+      "prov:collection": "ex:collection1",
+      "prov:entity": "ex:item2"
+    }
+  }
+}

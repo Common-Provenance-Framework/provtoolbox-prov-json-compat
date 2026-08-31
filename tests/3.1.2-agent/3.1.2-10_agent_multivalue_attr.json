@@ -1,0 +1,13 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "agent": {
+    "ex:ag1": {
+      "ex:role": [
+        {"$": "developer", "type": "xsd:string"},
+        {"$": "manager", "type": "xsd:string"}
+      ]
+    }
+  }
+}

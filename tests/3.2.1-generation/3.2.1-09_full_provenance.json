@@ -1,0 +1,22 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "entity": {
+    "ex:e1": {
+      "prov:type": {"$": "ex:Document", "type": "prov:QualifiedName"}
+    }
+  },
+  "activity": {
+    "ex:a1": {
+      "prov:startTime": "2011-11-16T16:05:00.000+01:00"
+    }
+  },
+  "wasGeneratedBy": {
+    "ex:gen1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1",
+      "prov:time": "2011-11-16T16:06:00.000+01:00"
+    }
+  }
+}

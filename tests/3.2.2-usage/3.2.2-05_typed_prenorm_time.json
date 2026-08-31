@@ -1,0 +1,13 @@
+{
+  "prefix": {
+    "ex": "http://example.org/"
+  },
+  "used": {
+    "ex:use1": {
+      "prov:entity": "ex:e1",
+      "prov:activity": "ex:a1",
+      "prov:time": "2011-11-16T16:00:00.000+01:00",
+      "ex:parameter": {"$": "p1", "type": "xsd:string"}
+    }
+  }
+}
